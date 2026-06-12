@@ -1,6 +1,6 @@
 # Zone-Based Firewall & SIEM Observability Stack
 
-A high-performance, Zone-Based Firewall (ZBF) developed in **Rust** that directly manipulates Linux Netfilter (`nftables`). It features an automated security logging pipeline integrated with a modern cloud-native observability stack (**Loki**, **Promtail**, and **Grafana**) running inside Docker for real-time threat detection and SIEM-like visual analysis.
+A laboratory to make a Zone-Based Firewall (ZBF) developed in **Rust** that directly manipulates Linux Netfilter (`nftables`). It features an automated security logging pipeline integrated with a modern cloud-native observability stack (**Loki**, **Promtail**, and **Grafana**) running inside Docker for real-time threat detection and SIEM-like visual analysis.
 
 ## Dashboard Preview
 *Here goes the screenshot of your main Grafana Dashboard showing the attacks, ports, and logs.*
