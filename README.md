@@ -4,7 +4,7 @@ A high-performance, Zero-Trust Zone-Based Firewall (ZBF) developed in **Rust** t
 
 ## Dashboard Preview
 *Here goes the screenshot of your main Grafana Dashboard showing the attacks, ports, and logs.*
-![Grafana Dashboard Overview](dashboards/screenshot.png)
+![Grafana Dashboard Overview](dashboard/screenshot.png)
 
 ---
 
