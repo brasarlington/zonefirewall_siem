@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  loki:
+    image: grafana/loki:3.0.0
+    ports:
+      - "53000:3000"
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - fw_monitor
+
+  promtail:
+    image: grafana/promtail:3.0.0
+    volumes:
+      - /var/log/ulogd_firewall.json:/var/log/ulogd_firewall.json
+      - ./promtail-config.yml:/etc/promtail/config.yml
+    command: -config.file=/etc/promtail/config.yml
+    depends_on:
+      - loki
+    networks:
+      - fw_monitor
+
+  grafana:
+    image: grafana/grafana:11.0.0
+    ports:
+      - "56789:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    depends_on:
+      - loki
+    networks:
+      - fw_monitor
+
+networks:
+  fw_monitor:
+    driver: bridge
+
+volumes:
+  grafana-storage:
