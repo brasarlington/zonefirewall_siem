@@ -78,7 +78,7 @@ Once the Docker stack is active via `docker-compose up -d`, navigate to `http://
 
 ---
 
-## 🛠️ Getting Started & Deployment
+## Getting Started & Deployment
 
 ### 1. Prerequisites
 Ensure you are running a Linux Kernel supporting `nftables` (e.g., Arch Linux) with Docker and `ulogd2` installed.
